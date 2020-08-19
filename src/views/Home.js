@@ -7,7 +7,7 @@ import HomePath from '../assets/home2.svg'
 import { Link } from 'react-router-dom'
 
 const Home = () => (
-  <div>
+  <div className='home'>
     {/* Header section */}
     <header className='header container-padding'>
       <div className='header-content'>
