@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 var confetti = {
-  maxCount: 150,
+  maxCount: 250,
   speed: 2,
   frameInterval: 15,
   alpha: 1,

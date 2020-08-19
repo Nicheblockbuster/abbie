@@ -1,10 +1,13 @@
 .congratulations {
   .header {
     min-height: 80vh;
-    background: url('../assets/header-bg.png') no-repeat 50% 50%;
+    background: url('../assets/header-bg.png') no-repeat 50% 0%;
     display: flex;
     justify-content: center;
-
+    
+    @media screen and (max-width: 1920px) {
+      background: url('../assets/header-bg-1920.png') no-repeat 50% 0%;
+    }
     @media screen and (max-width: 1400px) {
       background: url('../assets/header-bg-1400.png') no-repeat 50% 40%;
     }

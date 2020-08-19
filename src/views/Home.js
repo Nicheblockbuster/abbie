@@ -3,7 +3,7 @@ import Footer from '../components/Footer'
 import '../style/Home.scss'
 import Logo from '../assets/bomadu.svg'
 import Phone from '../assets/phone.svg'
-import HomePath from '../assets/home2.svg'
+import HomePath from '../assets/home.svg'
 import { Link } from 'react-router-dom'
 
 const Home = () => (
@@ -19,7 +19,7 @@ const Home = () => (
           Bomadu is your partner for deposit loans that help you move in quicker
         </p>
         <div className='form w-full'>
-          <input placeholder='name@domain.com' className='w-full' style={{ marginBottom: 20 }} />
+          <input type='email' placeholder='name@domain.com' className='w-full' style={{ marginBottom: 20 }} />
           <Link to='/congratulations'>
             <button className='w-full'>JOIN NOW</button>
           </Link>

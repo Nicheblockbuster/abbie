@@ -7,8 +7,10 @@ import confetti from '../js/confetti'
 
 const Congratulations = () => {
   useEffect(() => {
-    confetti.start(3000)
+    playConfetti()
   }, [])
+
+  const playConfetti = () => confetti.start(3000)
 
   return (
     <div className='congratulations'>
@@ -16,7 +18,7 @@ const Congratulations = () => {
       <header className='header container-padding'>
         <div className='header-content'>
           <img className='logo' src={Logo} alt='Bomadu' />
-          <button>CONGRATULATIONS</button>
+          <button onClick={() => playConfetti()}>CONGRATULATIONS</button>
           <p className='subtitle-main text-center text-white-secondary'>
             We have sent you an email to confirm your signup. In a few weeks we will follow up with
             your official invitation to finish your sign up and take the next big step to owning
