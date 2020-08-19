@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+@import './variables.scss';
+
+* {
+  font-family: Roboto, sans-serif;
+  box-sizing: border-box;
+}
+
+// A bunch of helper classes
+.container {
+  margin: 0 auto;
+  max-width: 1280px;
+  &-padding {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  @media screen and (max-width: 1280px) {
+    max-width: 1024px;
+  }
+}
+.title {
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 500;
+  @media screen and (max-width: 800px) {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  &-main {
+    font-size: 56px;
+    line-height: 64px;
+    font-weight: 500;
+    @media screen and (max-width: 800px) {
+      font-size: 42px;
+      line-height: 56px;
+    }
+    @media screen and (max-width: 560px) {
+      font-size: 36px;
+      line-height: 42px;
+    }
+  }
+}
+.subtitle {
+  font-size: 18px;
+  line-height: 24px;
+  @media screen and (max-width: 800px) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  &-main {
+    font-size: 24px;
+    line-height: 32px;
+    @media screen and (max-width: 800px) {
+      font-size: 20px;
+      line-height: 28px;
+    }
+    @media screen and (max-width: 560px) {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+}
+.w-full {
+  width: 100%;
+}
+.m-0 {
+  margin: 0;
+}
+.m-auto {
+  margin: 0 auto;
+}
+
+// Text colours used throughout the app
+.text {
+  &-center {
+    text-align: center;
+  }
+  &-white {
+    color: $white;
+    &-secondary {
+      color: $white-secondary;
+    }
+  }
+  &-pink {
+    color: $pink;
+  }
+  &-blue {
+    color: $blue;
+    &-secondary {
+      color: $blue-secondary;
+    }
+  }
+}
+
+// Overrides
+input {
+  height: 48px;
+  padding: 0 20px;
+  border-radius: 7px;
+  outline: none;
+  border: none;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
+
+  &::placeholder {
+    color: #cccccc;
+  }
+}
+button {
+  height: 48px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 7px;
+  outline: none;
+  border: none;
+  padding: 0 20px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
+  font-weight: bold;
+  background: $pink;
+  transition: 200ms ease-out;
+
+  &:hover {
+    background: $pink-light;
+  }
+
+  &:active {
+    transform: scale(0.96);
+  }
+}
+a {
+  text-decoration: none;
+}
