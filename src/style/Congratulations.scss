@@ -4,18 +4,18 @@
     background: url('../assets/header-bg.png') no-repeat 50% 0%;
     display: flex;
     justify-content: center;
-    
+
     @media screen and (max-width: 1920px) {
       background: url('../assets/header-bg-1920.png') no-repeat 50% 0%;
     }
     @media screen and (max-width: 1400px) {
-      background: url('../assets/header-bg-1400.png') no-repeat 50% 40%;
+      background: url('../assets/header-bg-1400.png') no-repeat 50% 0%;
     }
     @media screen and (max-width: 800px) {
-      background: url('../assets/header-bg-800.png') no-repeat 50% 30%;
+      background: url('../assets/header-bg-800.png') no-repeat 50% 0%;
     }
     @media screen and (max-width: 560px) {
-      background: url('../assets/header-bg-560.png') no-repeat 50% 20%;
+      background: url('../assets/header-bg-560.png') no-repeat 50% 0%;
     }
 
     &-content {
@@ -26,9 +26,13 @@
       .logo {
         display: block;
         padding-top: 30px;
-        padding-bottom: 80px;
+        padding-bottom: 50px;
         max-width: 240px;
         width: 100%;
+
+        @media screen and (max-width: 500px) {
+          padding-bottom: 30px;
+        }
       }
 
       > button {
@@ -37,13 +41,29 @@
         height: 56px;
         font-size: 18px;
         margin-bottom: 30px;
+
+        @media screen and (max-width: 500px) {
+          margin-bottom: 10px;
+        }
       }
 
-      .subtitle-main {
+      h2 {
+        margin: 0;
+        margin-top: 30px;
+
+        @media screen and (min-width: 1024px) {
+          font-size: 32px;
+        }
+        @media screen and (max-width: 500px) {
+          margin-top: 10px;
+        }
+      }
+
+      .subtitle {
         max-width: 450px;
       }
 
-      img {
+      .confetti {
         margin-top: calc(50px + 10vh);
 
         @media screen and (max-width: 500px) {

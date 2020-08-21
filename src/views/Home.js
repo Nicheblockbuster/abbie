@@ -1,51 +1,90 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Footer from '../components/Footer'
 import '../style/Home.scss'
 import Logo from '../assets/bomadu.svg'
 import Phone from '../assets/phone.svg'
 import HomePath from '../assets/home.svg'
-import { Link } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 
-const Home = () => (
-  <div className='home'>
-    {/* Header section */}
-    <header className='header container-padding'>
-      <div className='header-content'>
-        <img className='logo' src={Logo} alt='Bomadu' />
-        <h1 className='title-main m-0 text-center text-white'>
-          Intelligent current accounts that care
-        </h1>
-        <p className='subtitle-main text-center text-white-secondary'>
-          Bomadu is your partner for deposit loans that help you move in quicker
-        </p>
-        <div className='form w-full'>
-          <input type='email' placeholder='name@domain.com' className='w-full' style={{ marginBottom: 20 }} />
-          <Link to='/congratulations'>
-            <button className='w-full'>JOIN NOW</button>
-          </Link>
+const Home = () => {
+  // State
+  const [email, setEmail] = useState('')
+  const [error, setError] = useState(false)
+
+  // Router history
+  const history = useHistory()
+
+  // On change callback for input
+  const onChange = (e) => {
+    const newEmail = e.target.value
+    setEmail(newEmail)
+
+    // Validate email
+    const regex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    if (!regex.test(newEmail)) setError(true)
+    else setError(false)
+  }
+
+  // On click callback for sign up button
+  const signUp = async () => {
+    if (error || !email) return
+    
+    try {
+      history.push('/congratulations')
+    } catch (err) {
+      console.log(err)
+    }
+  }
+
+  return (
+    <div className='home'>
+      {/* Header section */}
+      <header className='header container-padding'>
+        <div className='header-content'>
+          <img className='logo' src={Logo} alt='Bomadu' />
+          <h1 className='title-main m-0 text-center text-white'>
+            Smart Current Accounts for First Time Buyers
+          </h1>
+          <p className='subtitle-main text-center text-white-secondary'>
+            Can you afford a mortgage but struggling with a deposit? Then bank on Mum and Dad United
+            to help you move in quicker with our clever 100% deposit loans.
+          </p>
+          <div className='form w-full'>
+            <input
+              value={email}
+              onChange={onChange}
+              type='email'
+              placeholder='name@domain.com'
+              className={`w-full ${error ? 'error' : ''}`}
+              style={{ marginBottom: 20 }}
+            />
+            <button className='w-full' onClick={() => signUp()}>
+              SIGN UP
+            </button>
+          </div>
+          <img className='phone' src={Phone} alt='' />
         </div>
-        <img className='phone' src={Phone} alt='' />
+      </header>
+
+      {/* Home path section */}
+      <div className='home-path container-padding'>
+        <h2 className='title m-0 text-center text-pink'>
+          We guide you along the path to your first home
+        </h2>
+        <p className='subtitle text-blue-secondary'>
+          Buying doesn’t have to be stressful! Let BOMADU help you get the keys faster. Our
+          AI-powered accounts help you save in pain-free ways. Start your journey by popping your
+          email in up top.
+        </p>
+        <img src={HomePath} alt='' />
       </div>
-    </header>
 
-    {/* Home path section */}
-    <div className='home-path container-padding'>
-      <h2 className='title m-0 text-center text-pink'>
-        WE HELP YOU ALL ALONG THE PATH TO YOUR FIRST HOME
-      </h2>
-      <p className='subtitle text-blue-secondary'>
-        Consectetur adipiscing elit. Phasellus pellentesque vestibulum nunc eu iaculis.Lorem ipsum
-        dolor sit amet, consectetur adipiscing elit. Phasellus pellentesque vestibulum nunc eu
-        iaculis.
-      </p>
-      <img src={HomePath} alt='' />
+      {/* Just for spacing */}
+      <div style={{ height: '15vh' }} />
+
+      <Footer />
     </div>
-
-    {/* Just for spacing */}
-    <div style={{ height: '15vh' }} />
-
-    <Footer />
-  </div>
-)
+  )
+}
 
 export default Home
