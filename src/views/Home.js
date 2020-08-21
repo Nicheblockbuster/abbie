@@ -28,7 +28,7 @@ const Home = () => {
   // On click callback for sign up button
   const signUp = async () => {
     if (error || !email) return
-    
+
     try {
       history.push('/congratulations')
     } catch (err) {

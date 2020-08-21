@@ -16,7 +16,7 @@ const Footer = () => (
           <img src={Facebook} alt='' />
         </a>
         <a
-          href='https://www.instagram.com/buywithbomadu/   '
+          href='https://www.instagram.com/buywithbomadu/'
           target='_blank'
           rel='noopener noreferrer'
         >
