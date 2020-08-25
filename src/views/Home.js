@@ -46,7 +46,7 @@ const Home = () => {
             <img className='logo' src={Logo} alt='Bomadu' />
           </Link>
           <h1 className='title-main m-0 text-center text-white'>
-            Smart Current Accounts with Guaranteed 100% Deposit for First Time Buyers
+            Smart Current Accounts with 100% Deposit Funding for First Time Buyers
           </h1>
           <p className='subtitle-main text-center text-white-secondary'>
             Can you afford a mortgage but struggling with a deposit? Then BOMADU can help you move

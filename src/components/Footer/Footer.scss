@@ -24,6 +24,10 @@
       max-width: 650px;
       text-align: center;
       color: $blue-secondary;
+
+      > a {
+        color: $blue-secondary;
+      }
     }
 
     .social-media {
