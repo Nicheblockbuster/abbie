@@ -15,7 +15,7 @@ const Footer = () => (
         <img className='logo' src={Logo} alt='' />
       </Link>
       <p className='text'>
-        BOMADU is trading name of BOMADU Marketplace Limited, a company registered in England and
+        BOMADU is a trading name of BOMADU Marketplace Limited, a company registered in England and
         Wales No. 11963778. BOMADU is registered with the Information Commissioner Office,
         No.ZA751266 and Trademark No. UK00003426609. We are currently going through our regulation
         approval with the licensing authority.
