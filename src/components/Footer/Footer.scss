@@ -4,7 +4,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: calc(100px + 50vh);
+  min-height: 50vh;
+  padding-top: 80px;
+  padding-bottom: 40px;
   background: rgba(178, 230, 250, 0.5);
 
   &-content {
@@ -18,8 +20,19 @@
       width: 100%;
     }
 
+    .text {
+      max-width: 650px;
+      text-align: center;
+      color: $blue-secondary;
+    }
+
     .social-media {
-      margin: 5vh 0;
+      margin: 3vh 0 5vh 0;
+      .follow-us {
+        text-align: center;
+        color: $blue-secondary;
+        margin-bottom: 2vh;
+      }
       img {
         margin: 0 10px;
       }

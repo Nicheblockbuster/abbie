@@ -4,7 +4,7 @@ import '../style/Home.scss'
 import Logo from '../assets/bomadu.svg'
 import Phone from '../assets/phone.svg'
 import HomePath from '../assets/home.svg'
-import { useHistory } from 'react-router-dom'
+import { useHistory, Link } from 'react-router-dom'
 
 const Home = () => {
   // State
@@ -20,6 +20,7 @@ const Home = () => {
     setEmail(newEmail)
 
     // Validate email
+    // eslint-disable-next-line
     const regex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
     if (!regex.test(newEmail)) setError(true)
     else setError(false)
@@ -41,25 +42,27 @@ const Home = () => {
       {/* Header section */}
       <header className='header container-padding'>
         <div className='header-content'>
-          <img className='logo' src={Logo} alt='Bomadu' />
+          <Link to='/'>
+            <img className='logo' src={Logo} alt='Bomadu' />
+          </Link>
           <h1 className='title-main m-0 text-center text-white'>
-            Smart Current Accounts for First Time Buyers
+            Smart Current Accounts with Guaranteed 100% Deposit for First Time Buyers
           </h1>
           <p className='subtitle-main text-center text-white-secondary'>
-            Can you afford a mortgage but struggling with a deposit? Then bank on Mum and Dad United
-            to help you move in quicker with our clever 100% deposit loans.
+            Can you afford a mortgage but struggling with a deposit? Then BOMADU can help you move
+            in quicker with our clever 100% deposit loans. Join the waitlist NOW!
           </p>
           <div className='form w-full'>
             <input
               value={email}
               onChange={onChange}
               type='email'
-              placeholder='name@domain.com'
+              placeholder='Your E-mail'
               className={`w-full ${error ? 'error' : ''}`}
               style={{ marginBottom: 20 }}
             />
             <button className='w-full' onClick={() => signUp()}>
-              SIGN UP
+              PRE-REGISTER
             </button>
           </div>
           <img className='phone' src={Phone} alt='' />

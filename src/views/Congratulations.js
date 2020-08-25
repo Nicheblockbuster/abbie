@@ -4,6 +4,7 @@ import '../style/Congratulations.scss'
 import Logo from '../assets/bomadu.svg'
 import Confetti from '../assets/confetti.png'
 import confetti from '../js/confetti'
+import { Link } from 'react-router-dom'
 
 const Congratulations = () => {
   useEffect(() => {
@@ -17,7 +18,9 @@ const Congratulations = () => {
       {/* Header section */}
       <header className='header container-padding'>
         <div className='header-content'>
-          <img className='logo' src={Logo} alt='Bomadu' />
+          <Link to='/'>
+            <img className='logo' src={Logo} alt='Bomadu' />
+          </Link>
           <button onClick={() => playConfetti()}>CONGRATULATIONS</button>
           <h2 className='title text-center text-white-secondary'>How do you (BOMA)DU?</h2>
           <p className='subtitle text-center text-white-secondary'>
