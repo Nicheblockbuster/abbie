@@ -4,10 +4,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 50vh;
+  min-height: 60vh;
   padding-top: 80px;
   padding-bottom: 40px;
-  background: rgba(178, 230, 250, 0.5);
+  background: #fad3c1;
 
   &-content {
     display: flex;
@@ -20,37 +20,26 @@
       width: 100%;
     }
 
-    .text {
-      max-width: 650px;
-      text-align: center;
-      color: $blue-secondary;
-
-      > a {
-        color: $blue-secondary;
-      }
-    }
-
     .social-media {
       margin: 3vh 0 5vh 0;
       .follow-us {
         text-align: center;
-        color: $blue-secondary;
         margin-bottom: 2vh;
       }
       img {
-        margin: 0 10px;
+        margin: 0 6px;
       }
     }
 
     .links {
       display: flex;
-      color: $blue;
+      color: $orange;
 
       a {
-        color: $blue;
+        color: $orange;
         transition: 200ms ease-out;
         &:hover {
-          color: $blue-secondary;
+          color: $orange-light;
         }
       }
 

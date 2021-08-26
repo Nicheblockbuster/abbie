@@ -1,0 +1,36 @@
+.features {
+  .features-background {
+    background: url('../../assets/featuresbackground.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 130px 0;
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: auto auto;
+      justify-content: center;
+      grid-gap: 40px;
+      img {
+        max-width: 280px;
+      }
+      p {
+        max-width: 650px;
+      }
+      @media screen and (max-width: 810px) {
+        grid-template-columns: auto;
+        img {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .signup-form {
+    max-width: 450px;
+    margin-top: 60px;
+    margin-bottom: 120px;
+  }
+}

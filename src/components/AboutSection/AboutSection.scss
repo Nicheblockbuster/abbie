@@ -1,0 +1,13 @@
+.about {
+  background: url('../../assets/aboutbackground.png') no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 130px 0;
+
+  p {
+    max-width: 650px;
+  }
+}

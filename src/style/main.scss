@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 // A bunch of helper classes
 .container {
   margin: 0 auto;
@@ -36,8 +40,12 @@
       line-height: 56px;
     }
     @media screen and (max-width: 560px) {
-      font-size: 36px;
-      line-height: 42px;
+      font-size: 32px;
+      line-height: 36px;
+    }
+    @media screen and (max-width: 380px) {
+      font-size: 26px;
+      line-height: 30px;
     }
   }
 }
@@ -71,6 +79,12 @@
 .m-auto {
   margin: 0 auto;
 }
+.font-normal {
+  font-weight: normal;
+}
+.font-bold {
+  font-weight: bold;
+}
 
 // Text colours used throughout the app
 .text {
@@ -83,14 +97,17 @@
       color: $white-secondary;
     }
   }
-  &-pink {
-    color: $pink;
+  &-orange {
+    color: $orange;
   }
   &-blue {
     color: $blue;
-    &-secondary {
-      color: $blue-secondary;
-    }
+  }
+  &-uppercase {
+    text-transform: uppercase;
+  }
+  &-gray {
+    color: $gray;
   }
 }
 
@@ -112,7 +129,7 @@ input {
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(255, 0, 85, 0.7);
   }
 }
-button {
+.button {
   height: 48px;
   cursor: pointer;
   display: flex;
@@ -125,15 +142,23 @@ button {
   padding: 0 20px;
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
   font-weight: bold;
-  background: $pink;
+  background: $orange;
   transition: 200ms ease-out;
 
   &:hover {
-    background: $pink-light;
+    background: $orange-light;
   }
 
   &:active {
     transform: scale(0.96);
+  }
+
+  &-secondary {
+    background: transparent;
+    box-shadow: none;
+    &:hover {
+      background: $orange;
+    }
   }
 }
 a {

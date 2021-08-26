@@ -1,0 +1,41 @@
+.homepathsection {
+  .home-path {
+    padding-top: 12vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding-bottom: 200px;
+    @media screen and (max-width: 800px) {
+      padding-bottom: 180px;
+    }
+    @media screen and (max-width: 470px) {
+      padding-bottom: 0;
+    }
+
+    .title {
+      max-width: 320px;
+    }
+    .subtitle {
+      max-width: 390px;
+      text-align: center;
+    }
+
+    img {
+      bottom: 0;
+      max-width: 1000px;
+      width: 100%;
+      position: absolute;
+      @media screen and (max-width: 470px) {
+        margin-top: -10px;
+        position: initial;
+      }
+    }
+  }
+
+  .signup-form {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    max-width: 450px;
+  }
+}

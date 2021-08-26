@@ -1,0 +1,7 @@
+export { Footer } from './Footer'
+export { Nav } from './Nav'
+export { AboutSection } from './AboutSection'
+export { FeaturesSection } from './FeaturesSection'
+export { HomePathSection } from './HomePathSection'
+export { TeamSection } from './TeamSection'
+export { ResetScroll } from './ResetScroll'
